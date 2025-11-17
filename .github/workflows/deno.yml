@@ -32,10 +32,11 @@ jobs:
           deno-version: v1.x
 
       - name: Verify formatting
-        run: deno fmt --check
+        run: deno fmt -c supabase/functions/fetch_and_store_articles --check supabase/functions/fetch_and_store_articles
 
       - name: Run linter
-        run: deno lint
+        run: deno -c supabase/functions/fetch_and_store_articles lint supabase/functions/fetch_and_store_articles
 
       - name: Run tests
-        run: deno test -A
+        run: deno -c supabase/functions/fetch_and_store_articles test -A supabase/functions/fetch_and_store_articles
+
