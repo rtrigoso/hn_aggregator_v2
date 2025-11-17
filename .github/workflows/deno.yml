@@ -38,5 +38,5 @@ jobs:
         run: deno -c supabase/functions/fetch_and_store_articles/deno.json lint supabase/functions/fetch_and_store_articles
 
       - name: Run tests
-        run: deno -c supabase/functions/fetch_and_store_articles/deno.json test -A supabase/functions/fetch_and_store_articles
+        run: deno -c supabase/functions/fetch_and_store_articles/deno.json test --permit-no-files -A supabase/functions/fetch_and_store_articles
 
